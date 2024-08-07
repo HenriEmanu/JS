@@ -1,16 +1,16 @@
 /* 
-  Crie uma lista de pacientes
+  Create a list of patients
 
-  Cada paciente dentro da lista, deverá conter
-    nome
-    idade
-    peso
-    altura
+  Each patient in the list should contain
+    name
+    age
+    weight
+    height
 
-  Escreva uma lista contendo o nome dos pacientes
+  Write a list containing the names of the patients
 */
 
-// Crie uma lista de pacientes
+// Create a list of patients
 const patients = [
     {
         name: 'Cami',
@@ -32,16 +32,16 @@ const patients = [
     },
 ]
 
-// Cria uma lista para armazenar as informações dos pacientes
+// Create a list to store patient details
 let patientDetails = []
 
-// Percorre cada paciente na lista
+// Loop through each patient in the list
 for (let patient of patients) {
-    // Cria uma string com os detalhes do paciente
+    // Create a string with the patient's details
     let details = `Name: ${patient.name}, Age: ${patient.age}, Weight: ${patient.weight}, Height: ${patient.height}`
-    // Adiciona a string à lista de detalhes dos pacientes
+    // Add the string to the patient details list
     patientDetails.push(details)
 }
 
-// Mostra a lista completa dos detalhes dos pacientes
+// Show the complete list of patient details
 alert(patientDetails.join('\n'))

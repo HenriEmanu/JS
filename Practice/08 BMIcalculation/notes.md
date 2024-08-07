@@ -1,5 +1,5 @@
-# Dados usados
+# Data Used
 
-[] Estruturas de dados: Objetos
-[] object literal
+[] Data structures: Objects
+[] Object literal
 [] for..of

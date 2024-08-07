@@ -1,5 +1,5 @@
-# O que eu aprendi nesta aula?
+# What I Learned in This Lesson
 
-[] Funções (named)
-[] Funções anônimas
+[] Named functions
+[] Anonymous functions
 [] Arrow functions

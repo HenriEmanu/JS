@@ -1,4 +1,4 @@
-# Melhorar a lógica de programção
+#Improve Programming Logic
 
-- Perguntas corretas (Perguntar já está correto)
-- Entender o problema
+- Correct Questions (Asking is already correct)
+- Understand the Problem

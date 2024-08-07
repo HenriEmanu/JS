@@ -1,7 +1,7 @@
-# Fluxos da aplicação
+# Application Flows
 
-- Caminhos lógicos baseado em algum dado ou informação
+- Logical paths based on some data or information
 
-[] Tipo de dado: Boolean (true / false)
+[] Data type: Boolean (true / false)
 [] if/else
-[] Operadores comparativos
+[] Comparison operators

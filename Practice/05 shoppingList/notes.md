@@ -1,12 +1,12 @@
-# Estrutura de dados
+# Data Structure
 
-- Organização e gerenciamento dos dados
-- Melhor eficiência do código
+- Organization and management of data
+- Better code efficiency
 
-[] Estruturas de repetição
- - Laço de repetição
+[] Loop structures
+ - Loop
  - for
- [] Vetores (Arrays)
-   [] Tipo de dado estruturado
-[] incremental | o valor + 1
-[] Tipo de dado: undefined
+ [] Arrays
+   [] Structured data type
+[] Incremental | value + 1
+[] Data type: undefined

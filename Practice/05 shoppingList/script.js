@@ -1,15 +1,15 @@
 /*
-  Capture 10 items para compor a lista de um supermercado.
+  Capture 10 items to create a shopping list.
   
-  Após capturar os 10 items, imprima-os, separando por vírgula.
+  After capturing the 10 items, print them, separated by commas.
 */
 
 let items = [];
 
-for(let item = 0; item < 2; item++) {
-  let itemName = prompt("Digite o item " + (item + 1))
+for(let item = 0; item < 10; item++) {
+  let itemName = prompt("Enter item " + (item + 1));
 
-  items[item] = itemName
+  items[item] = itemName;
 }
 
-alert(items)
+alert(items.join(', '));

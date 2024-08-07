@@ -1,21 +1,21 @@
 /*
 
-  Faça um programa que tenha um menu e apresente a seguinte mensagem:
+  Create a program that has a menu and displays the following message:
   
-  Olá usuário! Digite o número da opção desejada
+  Hello user! Enter the number of the desired option
 
-    1. Cadastrar um item na lista
-    2. Mostrar itens cadastrados
-    3. Sair do programa
+    1. Add an item to the list
+    2. Show registered items
+    3. Exit the program
   
   --- 
-  O programa deverá capturar o número digitado pelo usuário e mostrar o seguintes cenários:
+  The program should capture the number entered by the user and display the following scenarios:
 
-  Caso o usuário digite 1, ele poderá cadastrar um item em uma lista
-  Caso o usuário digite 2, ele poderá ver os itens cadastrados
-    Se não houver nenhum item cadastrado, mostrar a mensagem: 
-      "Não existem itens cadastrados"
-  Caso o usuário digite 3, a aplicação deverá ser encerrada.
+  If the user enters 1, they can add an item to a list
+  If the user enters 2, they can see the registered items
+    If no items are registered, display the message: 
+      "There are no registered items"
+  If the user enters 3, the application should exit.
 
 */
 
@@ -25,53 +25,53 @@ let items = [];
 while(options != 3) {
 
   options =  Number(prompt(`
-    Olá usuário! Digite o número da opção desejada
+    Hello user! Enter the number of the desired option
     
-    1. Cadastrar um item na lista
-    2. Mostrar itens cadastrados
-    3. Sair do programa`));
+    1. Add an item to the list
+    2. Show registered items
+    3. Exit the program`));
   
   switch(options) {
     
     case 1:
-      let item = prompt("Digite o nome do item");
-      items.push(item) ;
-    break;
+      let item = prompt("Enter the name of the item");
+      items.push(item);
+      break;
 
     case 2:
       if(items.length == 0) {
-        alert("Não existem itens cadastrados");
+        alert("There are no registered items");
       } else {
-        alert(items);
+        alert(items.join(', '));
       }
       break;
 
     case 3:
-      alert("Tchau");
+      alert("Goodbye");
       break;
 
     default:
-      alert('Opção inválida, tente novamente.');
+      alert('Invalid option, please try again.');
   }
 }
 
-/*   Outra opção
+/*   Another option
 
   if(options == 1) {
-    let item = prompt("Digite o nome do item")
+    let item = prompt("Enter the name of the item")
     items.push(item) 
   }
   
   else if (options == 2) {
   
     if(items.length == 0) {
-      alert("Não existem itens cadastrados")
+      alert("There are no registered items")
     } else {
       alert(items)
     }
   }
   else {
-    alert("Tchau")
+    alert("Goodbye")
   }
 
 */

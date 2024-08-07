@@ -1,17 +1,17 @@
 /* 
-  Dada uma lista de pacientes, descubra o IMC de cada paciente e imprima
+  Given a list of patients, calculate the BMI of each patient and print
 
-  "Paciente X possui o IMC de: Y"
+  "Patient X has a BMI of: Y"
 
-  Onde X é o nome do paciente e Y é o IMC desse paciente
+  Where X is the patient's name and Y is the BMI of that patient
 
-  Crie uma função para fazer o cálculo de IMC
+  Create a function to calculate BMI
 */
 
-/*  Calculando o IMC
-    peso / (altura * altura)
+/*  Calculating BMI
+    weight / (height * height)
 */
-// Crie uma lista de pacientes
+// Create a list of patients
 const patients = [
     {
         name: 'Cami',
@@ -33,17 +33,17 @@ const patients = [
     },
 ]
 
-function IMC(weight, height) {
+function calculateBMI(weight, height) {
     return (weight / ((height / 100) ** 2)).toFixed(3);
 }
 
-function message(patient) {
+function generateMessage(patient) {
     return `
-    O(A) paciente ${patient.name} possui o IMC de ${IMC(patient.weight, patient.height)}
+    Patient ${patient.name} has a BMI of ${calculateBMI(patient.weight, patient.height)}
     `;
 }
 
 for (let patient of patients) {
-    let IMCtext = message(patient)
-    alert(IMCtext)
+    let bmiText = generateMessage(patient);
+    alert(bmiText);
 }

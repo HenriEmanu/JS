@@ -1,15 +1,15 @@
-[] COntrolar o fluxo da aplicação
-[] Estrutura de repetição
+[] Control application flow
+[] Loop structure
     [] While
-[] Gerar número aleatório
-[] Tipo de dado: NaN
-    - Não é um número
-[] Tipo de erro: SyntaxError
-    - Erro de sintaxe; erro de escrita de código
-[] math
-    - pacote com funcionalidades matemáticas
+[] Generate random number
+[] Data type: NaN
+    - Not a number
+[] Error type: SyntaxError
+    - Syntax error; code writing error
+[] Math
+    - Package with mathematical functionalities
     - Math.random()
     - Math.round() - Math.ceil() - Math.floor()
-[] COnsole
-    - Pacote com funcionalidades para o console do devtools (browser)
-[] Template literals ou template strings
+[] Console
+    - Package with functionalities for the devtools console (browser)
+[] Template literals or template strings
