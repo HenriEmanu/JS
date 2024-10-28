@@ -1,0 +1,378 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Root variables */
+:root {
+    font-size: 62.5%; /* 1rem = 10px for easier calculations */
+    --font-family: 'Mulish', sans-serif;
+
+    /* Colors */
+    --color-bg: #f9f4fb;
+    --color-primary: #b52184;
+    --color-text: #312d64;
+    --color-footer-bg: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+
+    /* Font Sizes */
+    --fs-large: 3.2rem; /* For h1 and h2 */
+    --fs-medium: 2.8rem; /* For h3 */
+    --fs-body: 1.6rem; /* For p and buttons */
+
+    /* Line Heights */
+    --lh-large: 4rem; /* For h1 and h2 */
+    --lh-medium: 3.6rem; /* For h3 */
+    --lh-body: 2rem; /* For p and buttons */
+
+    /* Spacing */
+    --m-large: 1.7rem 0 0.5rem; /* For h1 */
+    --m-medium: 2rem 0 0; /* For h3 */
+    --m-body: 0 0 3.5rem; /* For p */
+    --p-intro: 0 3.4rem 9.3rem 3.2rem; /* For intro section */
+    --p-resources: 5.4rem 4rem; /* For resources section */
+    --p-contact: 7.8rem 3.9rem; /* For contact section */
+    --p-footer: 3.2rem 1.6rem; /* For footer */
+
+    /* Button Sizes */
+    --btn-width: 5.8rem;
+    --btn-height: 10.5rem; /* Maintain original height for the button */
+    --btn-border: 4px;
+    --btn-radius: 76rem; /* Large value for an oval shape */
+    --btn-icon-size: 3rem;
+
+    /* Card Sizes */
+    --card-padding: 2.6rem;
+    --card-radius: 2rem;
+    --card-img-size: 8rem;
+    --card-text-width: 26.5rem;
+}
+
+body {
+    background: var(--color-bg);
+    font-family: var(--font-family);
+}
+
+img {
+    width: 100%; /* Responsive images */
+}
+
+/* Typography */
+h1, h2 {
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: var(--m-large);
+}
+
+h3 {
+    font-size: var(--fs-medium);
+    line-height: var(--lh-medium);
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-bottom: var(--m-medium);
+}
+
+p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--m-body);
+}
+
+/* Form */
+button,
+input,
+textarea {
+    border: none; /* Remove default borders */
+    background: none; /* Remove default backgrounds */
+    font-family: var(--font-family);
+    font-size: var(--fs-body);
+}
+
+/* Intro Section */
+#intro {
+    padding: var(--p-intro);
+}
+
+.intro-content h1, p {
+    text-align: center;
+}
+
+#intro .intro-content p {
+    margin-bottom: 3.5rem;
+    font-size: 2rem; /* Ajuste para um valor razoável */
+}
+
+#intro .button-down {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    border: var(--btn-border) solid var(--color-primary);
+    border-radius: var(--btn-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: transparent; /* Ensuring background is transparent */
+    box-shadow: none; /* Removing any default box-shadow */
+}
+
+#intro .button-down:hover {
+    filter: brightness(0.7);
+}
+
+#intro .button-down img {
+    width: var(--btn-icon-size);
+}
+
+/* Resources Section */
+#resources {
+    background: var(--color-footer-bg);
+    padding: var(--p-resources);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4.9rem;
+}
+
+.resource-card {
+    background: var(--color-bg);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    max-width: 32rem;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+}
+
+.resource-card img {
+    width: var(--card-img-size);
+    margin-bottom: 3.3rem;
+}
+
+.resource-text {
+    width: var(--card-text-width);
+    text-align: left;
+}
+
+.resource-text h3 {
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    padding: var(--p-contact); /* Aplica padding ao redor da seção usando a variável definida para o padding da seção de contato */
+    max-width: 600px; /* Define a largura máxima da seção de contato como 600 pixels */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+}
+
+#contact fieldset {
+    border: none; /* Remove a borda padrão dos fieldsets dentro da seção de contato */
+    padding: 0; /* Remove o padding padrão dos fieldsets */
+    margin: 0; /* Remove a margem padrão dos fieldsets */
+}
+
+#contact h2 {
+    margin-bottom: 4.3rem; /* Adiciona uma margem abaixo do título h2 dentro da seção de contato */
+}
+
+.input-wrapper {
+    margin-bottom: 2.4rem; /* Adiciona uma margem abaixo de cada wrapper de entrada */
+}
+
+.input-container {
+    display: flex; /* Usa Flexbox para layout do container de entrada */
+    align-items: center; /* Alinha verticalmente os itens dentro do container de entrada */
+    border: 0.15rem solid var(--color-text); /* Define uma borda sólida de 0.15rem com a cor de texto definida na variável */
+    border-radius: 1.6rem; /* Arredonda os cantos da borda do container de entrada */
+    width: 100%; /* Define a largura do container de entrada para 100% do contêiner pai */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total do container */
+}
+
+.input-icon {
+    width: 2rem; /* Define a largura do ícone dentro do container de entrada */
+    height: auto; /* Mantém a proporção do ícone */
+    margin: 0 1rem; /* Adiciona um espaço horizontal de 1rem entre o ícone e o campo de entrada */
+}
+
+input,
+textarea {
+    flex: 1; /* Faz com que os campos de entrada e o textarea preencham o espaço restante dentro do container */
+    border: none; /* Remove a borda padrão dos campos de entrada e do textarea */
+    padding: 1.2rem 1.6rem; /* Adiciona padding interno aos campos de entrada e textarea */
+    color: var(--color-text); /* Define a cor do texto dentro dos campos */
+    font-weight: 600; /* Define o peso da fonte como 600 */
+    font-size: var(--fs-body); /* Define o tamanho da fonte usando a variável definida para o corpo do texto */
+    border-radius: 1.6rem; /* Arredonda os cantos dos campos de entrada e do textarea */
+}
+
+textarea {
+    height: 126px; /* Define uma altura específica para o textarea */
+    max-width: 348px; /* Define uma largura máxima específica para o textarea */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text); /* Define a cor do texto dos placeholders como a cor de texto definida na variável */
+    font-weight: 600; /* Define o peso da fonte dos placeholders como 600 */
+    font-size: var(--fs-body); /* Define o tamanho da fonte dos placeholders usando a variável definida para o corpo do texto */
+}
+
+/* Contact Button */
+#contact form button {
+    background: var(--color-footer-bg); /* Define o fundo do botão com a cor de fundo do rodapé definida na variável */
+    color: var(--color-bg); /* Define a cor do texto do botão como a cor de fundo definida na variável */
+    font-size: 1.4rem; /* Define o tamanho da fonte do botão */
+    font-weight: 700; /* Define o peso da fonte do botão como 700 */
+    line-height: 2.4rem; /* Define a altura da linha do texto dentro do botão */
+    padding: 1rem 1.6rem; /* Adiciona padding interno ao botão */
+    border-radius: 1.6rem; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Define o cursor como pointer ao passar sobre o botão */
+    transition: filter 200ms; /* Adiciona uma transição suave para o filtro aplicado ao botão */
+}
+
+#contact form button:hover {
+    filter: brightness(0.9); /* Aplica um filtro de brilho ao botão quando o cursor passa sobre ele, tornando-o um pouco mais escuro */
+}
+
+.input-wrapper {
+    border-right: none; /* Remove a borda direita do wrapper de entrada */
+}
+
+.input-wrapper textarea {
+    border: 0.15rem solid var(--color-text); /* Define uma borda sólida ao redor do textarea dentro do wrapper de entrada */
+    border-radius: 1.6rem; /* Arredonda os cantos da borda do textarea */
+    width: 80rem; /* Define uma largura específica para o textarea dentro do wrapper de entrada */
+}
+#contact .stars-image {
+    visibility: visible; /* Torna a imagem visível */
+    order: 1;
+    width: 100%; /* Responsivo */
+}
+
+/* Footer */
+footer {
+    background: var(--color-footer-bg);
+    padding: var(--p-footer);
+}
+
+
+footer p {
+    color: var(--color-bg);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Telas de celular */
+@media (max-width: 767px) {
+    #intro {
+        padding: 0 1rem 3rem; /* Ajusta o preenchimento */
+        max-height: auto; /* Remove a altura máxima */
+        text-align: center; /* Centraliza o texto e o conteúdo */
+    }
+
+    .stars-img {
+        display: none;
+    }
+}
+
+/* Tablets e telas menores */
+@media (min-width: 768px) and (max-width: 1452px) {
+    #intro {
+        flex-direction: column; /* Alterna para layout em coluna em telas menores */
+        align-items: center; /* Centraliza o conteúdo */
+        padding: 0 2rem 5rem; /* Ajusta o preenchimento */
+        max-height: auto; /* Remove a altura máxima */
+    }
+
+    .stars-img {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1454px) {
+    #intro {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2.9rem 10.3rem 10.9rem;
+        max-height: 83.6rem;
+    }
+
+    .intro-content {
+        order: 1; /* Garante que o conteúdo fique à esquerda */
+        margin-top: 30rem;
+    }
+    
+    .astronaut {
+        order: 2; /* Garante que a imagem do astronauta fique à direita */
+    }
+    
+    h1, h2 {
+        margin-bottom: 1.2rem; /* Ajusta o espaçamento abaixo do título */
+        font-size: 5.4rem;
+    }
+    
+    .intro-content p {
+        font-size: 2rem; /* Ajusta o tamanho da fonte conforme necessário */
+        line-height: 7rem;
+        margin: 0;
+    }
+    
+    .button-down {
+        margin-left: 0;
+    }
+    
+    /* Resources */
+    .resource-card {
+        max-width: 40rem; /* Increase the maximum width of the cards */
+    }
+    
+    .resource-text {
+        text-align: center;
+        margin-inline: auto;
+    }
+    
+    .resource-text h3 {
+        font-size: 3.4em; /* Increase h3 size */
+        padding-bottom: 2rem;
+    }
+    
+    .resource-text p {
+        font-size: 2.4rem; /* Increase p size */
+        line-height: 2.4rem; /* Adjust line-height accordingly */
+    }
+
+    /* Contact Section */
+
+    #contact {
+        height: 60rem;
+        margin-inline: 0;
+        display: flex;
+        flex-direction: row; /* Altere para row */
+        justify-content: space-between; /* Adicione esta linha */
+        align-items: center; /* Adicione esta linha */
+        width: 100vw;
+    }
+
+    #contact form {
+        flex: 1; /* Adicione esta linha */
+    }
+
+
+    /* decoration */
+    .stars img{
+        display: flex;
+        position: absolute;
+        width: 64rem;
+
+        right: 0.1px;
+        bottom: -1178px;
+    }
+}
